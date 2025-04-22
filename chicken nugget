@@ -1,0 +1,118 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Instagram, Phone, ShoppingCart } from "lucide-react";
+import Image from "next/image";
+
+export default function YummyYummyLanding() {
+  return (
+    <div className="min-h-screen bg-yellow-50 p-6 font-sans">
+      <div className="max-w-6xl mx-auto text-center">
+        <h1 className="text-4xl font-bold text-yellow-800 mb-2">
+          🐔 Yummy-Yummy Chicken Nuggets 🍗
+        </h1>
+        <p className="text-lg text-yellow-700 mb-6">
+          Lezatnya Nugget Ayam yang Bikin Nagih!
+        </p>
+
+        {/* Gambar utama */}
+        <div className="mb-10">
+          <Image
+            src="/images/nugget-main.jpg"
+            alt="Yummy Yummy Chicken Nuggets"
+            width={800}
+            height={500}
+            className="rounded-2xl shadow-xl mx-auto"
+          />
+        </div>
+
+        {/* Varian Produk */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold text-yellow-800 mb-4">Varian Produk</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="bg-white shadow-md">
+              <CardContent className="p-4">
+                <Image src="/images/varian-original.jpg" alt="Original" width={300} height={200} className="rounded-xl mb-2" />
+                <h3 className="text-xl font-semibold">Original</h3>
+                <p className="text-gray-600">Rasa klasik dengan ayam 100% asli, cocok untuk semua usia.</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white shadow-md">
+              <CardContent className="p-4">
+                <Image src="/images/varian-spicy.jpg" alt="Spicy" width={300} height={200} className="rounded-xl mb-2" />
+                <h3 className="text-xl font-semibold">Spicy</h3>
+                <p className="text-gray-600">Sensasi pedas nikmat, cocok buat kamu yang suka tantangan rasa!</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white shadow-md">
+              <CardContent className="p-4">
+                <Image src="/images/varian-keju.jpg" alt="Keju" width={300} height={200} className="rounded-xl mb-2" />
+                <h3 className="text-xl font-semibold">Cheese</h3>
+                <p className="text-gray-600">Dipadu dengan lelehan keju yang creamy dan lezat!</p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Menu Kami */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold text-yellow-800 mb-4">Our Menu</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="bg-white shadow-lg">
+              <CardContent className="p-4">
+                <h3 className="text-xl font-bold mb-2">Nugget Box (Isi 10 pcs)</h3>
+                <p className="text-gray-700">Porsi praktis untuk sekali makan. Tersedia dalam semua varian.</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white shadow-lg">
+              <CardContent className="p-4">
+                <h3 className="text-xl font-bold mb-2">Family Pack (Isi 30 pcs)</h3>
+                <p className="text-gray-700">Cocok untuk keluarga. Lebih hemat dan puas!</p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Cara Pemesanan */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold text-yellow-800 mb-4">Cara Pemesanan</h2>
+          <ol className="list-decimal text-left space-y-2 text-gray-700 max-w-2xl mx-auto ml-4">
+            <li>Pilih varian dan ukuran paket yang kamu inginkan.</li>
+            <li>Hubungi kami melalui WhatsApp atau DM Instagram.</li>
+            <li>Lakukan pembayaran dan konfirmasi pesanan.</li>
+            <li>Tunggu pesanan dikirim langsung ke rumahmu!</li>
+          </ol>
+        </section>
+
+        {/* CTA */}
+        <div className="mb-10">
+          <h2 className="text-xl font-semibold mb-2 text-yellow-800">Beli Sekarang:</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button variant="default" className="bg-yellow-600 hover:bg-yellow-700 text-white">
+              <ShoppingCart className="mr-2 h-5 w-5" /> Tokopedia
+            </Button>
+            <Button variant="default" className="bg-yellow-600 hover:bg-yellow-700 text-white">
+              <ShoppingCart className="mr-2 h-5 w-5" /> Shopee
+            </Button>
+            <Button variant="default" className="bg-yellow-600 hover:bg-yellow-700 text-white">
+              <ShoppingCart className="mr-2 h-5 w-5" /> Instagram DM
+            </Button>
+          </div>
+        </div>
+
+        {/* Kontak */}
+        <footer className="bg-yellow-100 p-6 rounded-xl text-yellow-800">
+          <h3 className="text-lg font-semibold mb-2">Hubungi Kami</h3>
+          <div className="flex flex-col md:flex-row justify-center gap-6 text-lg">
+            <div className="flex items-center gap-2">
+              <Instagram /> @yummyyummy_nuggets
+            </div>
+            <div className="flex items-center gap-2">
+              <Phone /> 0812-3456-7890
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  );
+}
